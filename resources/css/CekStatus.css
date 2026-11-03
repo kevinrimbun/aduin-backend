@@ -1,0 +1,583 @@
+
+/* =====================================
+   DETAIL PENGADUAN ADUIN
+===================================== */
+
+.detail-page {
+    min-height: 100vh;
+    background: #f4f9ff;
+    padding: 20px 24px 28px;
+    font-family: inherit;
+    color: #18345b;
+}
+
+.detail-page *,
+.detail-modal-backdrop * {
+    box-sizing: border-box;
+}
+
+.detail-container {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.detail-header {
+    margin-bottom: 15px;
+}
+
+.detail-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #4277ac;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.detail-back:hover {
+    color: #137dff;
+}
+
+.detail-header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 750;
+    color: #142f58;
+}
+
+/* GRID */
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.9fr) minmax(260px, 1fr);
+    gap: 12px;
+    align-items: stretch;
+}
+
+.detail-card {
+    background: #fff;
+    border: 1px solid #d9e6f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(21, 66, 112, 0.04);
+    padding: 16px;
+    min-width: 0;
+}
+
+/* INFORMASI LAPORAN */
+
+.detail-informasi {
+    min-height: 310px;
+}
+
+.detail-nomor-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.detail-nomor {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.detail-nomor span {
+    font-size: 12px;
+    font-weight: 650;
+    color: #2a456a;
+}
+
+.detail-nomor strong {
+    font-size: 15px;
+    color: #17375f;
+}
+
+.detail-data-row {
+    display: grid;
+    grid-template-columns: 135px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    margin-bottom: 14px;
+}
+
+.detail-data-row > span {
+    font-size: 12px;
+    color: #42648a;
+}
+
+.detail-data-row p {
+    margin: 0;
+    color: #1e3e69;
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.detail-description {
+    margin-top: 20px;
+}
+
+.detail-description-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.detail-description-title strong {
+    font-size: 12px;
+    color: #28446b;
+}
+
+.detail-description-title span {
+    height: 1px;
+    flex: 1;
+    background: #e1eaf5;
+}
+
+.detail-description p {
+    margin: 0;
+    color: #3b5575;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* BADGE */
+
+.detail-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 13px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 650;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.detail-badge-oranye {
+    background: #ffab19;
+    color: white;
+}
+
+.detail-badge-kuning {
+    background: #f3b739;
+    color: white;
+}
+
+.detail-badge-biru {
+    background: #e8f2ff;
+    color: #1875ec;
+    border: 1px solid #bedbff;
+}
+
+.detail-badge-hijau {
+    background: #e4f8e8;
+    color: #249a52;
+}
+
+.detail-badge-merah {
+    background: #fff0e4;
+    color: #ed8420;
+}
+
+/* FOTO UTAMA */
+
+.detail-foto-utama {
+    padding: 12px;
+    min-height: 310px;
+}
+
+.detail-main-photo-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.detail-main-photo {
+    width: 100%;
+    height: 100%;
+    max-height: 360px;
+    min-height: 280px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+.detail-foto-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 130px;
+    background: #edf4fb;
+    color: #7292b4;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+/* JUDUL CARD */
+
+.detail-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.detail-card-heading h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 750;
+    color: #203e67;
+    white-space: nowrap;
+}
+
+.detail-card-heading > span {
+    flex: 1;
+    height: 1px;
+    background: #dce8f5;
+}
+
+/* TIMELINE */
+
+.detail-riwayat {
+    min-height: 280px;
+}
+
+.detail-timeline {
+    position: relative;
+    padding-left: 5px;
+}
+
+.detail-timeline-item {
+    display: grid;
+    grid-template-columns: 14px 105px minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: center;
+    min-height: 44px;
+}
+
+.detail-timeline-marker {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.detail-timeline-marker::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #d4e5f5;
+}
+
+.detail-timeline-item:first-child .detail-timeline-marker::before {
+    top: 50%;
+}
+
+.detail-timeline-item:last-child .detail-timeline-marker::before {
+    bottom: 50%;
+}
+
+.detail-dot {
+    position: relative;
+    z-index: 1;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px #d4e2f1;
+}
+
+.detail-dot-biru {
+    background: #2393c3;
+}
+
+.detail-dot-hijau {
+    background: #42a56c;
+}
+
+.detail-dot-kuning {
+    background: #f5ad18;
+}
+
+.detail-dot-merah {
+    background: #fa4e3e;
+}
+
+.detail-timeline-date {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    font-size: 11px;
+    color: #5a779c;
+}
+
+.detail-timeline-text {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #27476f;
+}
+
+/* DOKUMENTASI */
+
+.detail-dokumentasi {
+    min-height: 280px;
+}
+
+.detail-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.detail-gallery-button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.detail-gallery-photo {
+    display: block;
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform .2s ease;
+}
+
+.detail-gallery-button:hover .detail-gallery-photo {
+    transform: scale(1.04);
+}
+
+.detail-gallery-all {
+    width: 100%;
+    min-height: 37px;
+    border: 0;
+    border-radius: 6px;
+    background: #197dff;
+    color: white;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.detail-gallery-all:hover {
+    background: #0969df;
+}
+
+/* MODAL GALERI */
+
+.detail-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(10, 27, 52, .75);
+}
+
+.detail-modal {
+    width: min(100%, 760px);
+    padding: 18px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, .2);
+}
+
+.detail-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.detail-modal-header h2 {
+    margin: 0;
+    color: #193b6a;
+    font-size: 17px;
+}
+
+.detail-modal-header button {
+    border: none;
+    background: transparent;
+    color: #35577f;
+    cursor: pointer;
+}
+
+.detail-modal-image {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.detail-modal-image > img,
+.detail-modal-image > .detail-foto-placeholder {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    max-height: 480px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: #edf4fb;
+}
+
+.detail-modal-image > button {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #d5e4f5;
+    border-radius: 50%;
+    background: #f4f8fd;
+    color: #1a6bd3;
+    cursor: pointer;
+}
+
+.detail-modal-caption {
+    margin: 13px 0 6px;
+    text-align: center;
+    font-size: 13px;
+    color: #35567d;
+}
+
+.detail-modal-counter {
+    text-align: center;
+    color: #7992b0;
+    font-size: 12px;
+}
+
+.detail-header-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.detail-header-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e4f0ff;
+    color: #0875f9;
+    border-radius: 9px;
+    flex-shrink: 0;
+}
+
+.detail-header-title h1 {
+    margin: 0;
+    font-size: 23px;
+    font-weight: 750;
+    color: #082d66;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-foto-utama,
+    .detail-informasi,
+    .detail-riwayat,
+    .detail-dokumentasi {
+        min-height: auto;
+    }
+
+    .detail-main-photo-button,
+    .detail-main-photo {
+        min-height: 220px;
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .detail-page {
+        padding: 12px;
+    }
+
+    .detail-card {
+        padding: 12px;
+    }
+
+    .detail-header h1 {
+        font-size: 20px;
+    }
+
+    .detail-nomor-row {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .detail-nomor {
+        flex-wrap: wrap;
+        gap: 6px 12px;
+    }
+
+    .detail-data-row {
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 8px;
+    }
+
+    .detail-timeline-item {
+        grid-template-columns: 14px minmax(0, 1fr) auto;
+        gap: 8px;
+        padding: 8px 0;
+    }
+
+    .detail-timeline-date {
+        grid-column: 2;
+    }
+
+    .detail-timeline-text {
+        grid-column: 2;
+    }
+
+    .detail-timeline-item > .detail-badge {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+
+    .detail-gallery-photo {
+        height: 125px;
+    }
+
+    .detail-modal-image {
+        gap: 5px;
+    }
+
+    .detail-modal-image > button {
+        width: 28px;
+        height: 28px;
+    }
+}

@@ -1,0 +1,707 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+.aduin-auth {
+  --auth-navy: #102c49;
+  --auth-green: #198b62;
+  --auth-blue: #2874df;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 52% 48%;
+  background: #f8fbff;
+  color: var(--auth-navy);
+}
+
+.aduin-auth * {
+  box-sizing: border-box;
+}
+
+
+.aduin-auth-visual {
+    position: relative;
+    min-height: 100vh;
+    padding: 52px clamp(32px, 5vw, 85px);
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(232, 245, 255, 0.90) 0%,
+            rgba(232, 245, 255, 0.82) 45%,
+            rgba(232, 245, 255, 0.65) 100%
+        ),
+        url("/Assets/banner.jpg") center center / cover no-repeat;
+}
+
+
+.aduin-auth-visual::before {
+  content: "";
+  position: absolute;
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  top: -190px;
+  right: -160px;
+  background: rgba(255, 255, 255, .35);
+}
+
+.aduin-auth-visual-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 104px);
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.aduin-auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #103852;
+  text-decoration: none;
+}
+
+.aduin-auth-brand-icon {
+  width: 53px;
+  height: 53px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #56b84d, #087c6d);
+  color: white;
+  border-radius: 17px;
+  box-shadow: 0 8px 22px rgba(20, 122, 88, .19);
+}
+
+.aduin-auth-brand strong {
+  display: block;
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: -.9px;
+}
+
+.aduin-auth-brand span {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #526c80;
+  margin-top: 3px;
+}
+
+.aduin-auth-hero {
+  margin: auto 0;
+  padding: 55px 0;
+}
+
+.aduin-auth-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 15px;
+  border: 1px solid rgba(18, 132, 92, .14);
+  background: rgba(255, 255, 255, .78);
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #16825c;
+  margin-bottom: 28px;
+}
+
+.aduin-auth-pulse {
+  width: 8px;
+  height: 8px;
+  background: #32b678;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(50, 182, 120, .13);
+}
+
+.aduin-auth-hero h1 {
+  font-size: clamp(35px, 3.2vw, 54px);
+  font-weight: 800;
+  line-height: 1.24;
+  letter-spacing: -1.9px;
+  margin: 0 0 22px;
+}
+
+.aduin-auth-hero h1 span {
+  color: #16845d;
+}
+
+.aduin-auth-hero > p {
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 1.9;
+  font-weight: 500;
+  color: #45647b;
+  margin: 0;
+}
+
+.aduin-auth-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 42px;
+}
+
+.aduin-auth-feature {
+  padding: 22px 17px;
+  min-height: 176px;
+  background: rgba(255, 255, 255, .9);
+  border: 1px solid rgba(255, 255, 255, .85);
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(36, 89, 116, .09);
+  backdrop-filter: blur(12px);
+}
+
+.aduin-auth-feature-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.aduin-auth-feature-icon.green {
+  background: #e0f6e6;
+  color: #259c54;
+}
+
+.aduin-auth-feature-icon.blue {
+  background: #e3efff;
+  color: #2d80ee;
+}
+
+.aduin-auth-feature-icon.orange {
+  background: #fff0d9;
+  color: #ed9a24;
+}
+
+.aduin-auth-feature strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+.aduin-auth-feature p {
+  font-size: 11px;
+  line-height: 1.65;
+  color: #657c91;
+  margin: 0;
+}
+
+.aduin-auth-visual-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #315a60;
+}
+
+.aduin-auth-form-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px clamp(25px, 5vw, 90px);
+  background: #fff;
+}
+
+.aduin-auth-form-wrap {
+  width: 100%;
+  max-width: 455px;
+}
+
+.aduin-auth-mobile-brand {
+  display: none;
+}
+
+.aduin-auth-welcome-icon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  background: #e6f6eb;
+  color: #259a61;
+  border-radius: 17px;
+  margin-bottom: 26px;
+}
+
+.aduin-auth-kicker {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #258e69;
+  margin-bottom: 12px;
+}
+
+.aduin-auth-form-heading h2 {
+  font-size: clamp(27px, 2.4vw, 37px);
+  letter-spacing: -1.2px;
+  line-height: 1.3;
+  margin: 0 0 13px;
+  font-weight: 800;
+}
+
+.aduin-auth-form-heading h2 span {
+  color: #22965e;
+}
+
+.aduin-auth-form-heading p {
+  color: #74869a;
+  line-height: 1.8;
+  font-size: 13px;
+  margin: 0 0 35px;
+}
+
+.aduin-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.aduin-auth-field label {
+  display: block;
+  margin-bottom: 11px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.aduin-auth-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  height: 56px;
+  padding: 0 17px;
+  background: #fbfdff;
+  border: 1px solid #dce5ee;
+  border-radius: 13px;
+  color: #8498ae;
+  transition: .2s ease;
+}
+
+.aduin-auth-input-wrap:focus-within {
+  border-color: #32a37b;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(42, 156, 109, .1);
+  color: #25956d;
+}
+
+.aduin-auth-input-wrap input {
+  min-width: 0;
+  flex: 1;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #173451;
+  font: inherit;
+  font-size: 13px;
+}
+
+.aduin-auth-input-wrap input::placeholder {
+  color: #9aabba;
+}
+
+.aduin-auth-eye {
+  display: grid;
+  place-items: center;
+  padding: 4px;
+  background: none;
+  border: none;
+  color: #8397aa;
+  cursor: pointer;
+}
+
+.aduin-auth-eye:hover {
+  color: #198b62;
+}
+
+.aduin-auth-submit {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  border-radius: 13px;
+  background: linear-gradient(110deg, #52b34b, #128e75);
+  box-shadow: 0 10px 22px rgba(26, 142, 102, .2);
+  color: white;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+  margin-top: 8px;
+}
+
+.aduin-auth-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(26, 142, 102, .26);
+}
+
+.aduin-auth-submit:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+.aduin-auth-spinner {
+  animation: aduin-spin 1s linear infinite;
+}
+
+@keyframes aduin-spin {
+  to { transform: rotate(360deg); }
+}
+
+.aduin-auth-error {
+  background: #fff0f0;
+  border: 1px solid #ffd5d5;
+  color: #bc3434;
+  border-radius: 11px;
+  padding: 13px 15px;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.aduin-auth-register {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 32px;
+  padding: 18px;
+  background: #f2f8ff;
+  border-radius: 15px;
+}
+
+.aduin-auth-register-icon {
+  width: 47px;
+  height: 47px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 13px;
+  color: #2b83e8;
+  background: #e1eeff;
+}
+
+.aduin-auth-register span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.aduin-auth-register a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #2478df;
+}
+
+.aduin-auth-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  color: #778ba1;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.aduin-auth-back:hover {
+  color: #198b62;
+}
+
+.aduin-auth-copyright {
+  text-align: center;
+  font-size: 10px;
+  color: #a0afbf;
+  margin: 38px 0 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 1050px) {
+  .aduin-auth {
+    grid-template-columns: 45% 55%;
+  }
+
+  .aduin-auth-visual {
+    padding: 38px 30px;
+  }
+
+  .aduin-auth-hero h1 {
+    font-size: 34px;
+  }
+
+  .aduin-auth-features {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .aduin-auth-feature {
+    min-height: 0;
+    padding: 13px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 3px 12px;
+    align-items: center;
+  }
+
+  .aduin-auth-feature-icon {
+    width: 38px;
+    height: 38px;
+    grid-row: span 2;
+    margin: 0;
+  }
+
+  .aduin-auth-feature p {
+    grid-column: 2;
+  }
+}
+
+
+/* ========================================
+   ADUIN LOGIN - WARNA SESUAI BERANDA
+======================================== */
+
+.aduin-auth {
+    --auth-navy: #102c49;
+    --auth-green: #0b4f86;
+    --auth-blue: #287de1;
+    background: #f4f7fb;
+    color: #102c49;
+}
+
+/* Banner sama dengan Beranda */
+.aduin-auth-visual {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(8, 52, 90, 0.78) 0%,
+            rgba(10, 67, 110, 0.65) 48%,
+            rgba(8, 48, 83, 0.80) 100%
+        ),
+        url("/Assets/banner.jpg") center / cover no-repeat;
+}
+
+/* Logo */
+.aduin-auth-brand {
+    color: #ffffff;
+}
+
+.aduin-auth-brand-icon {
+    background: #ffffff;
+    color: #0b4f86;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.aduin-auth-brand span {
+    color: #dceaf7;
+}
+
+/* Teks banner */
+.aduin-auth-eyebrow {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.24);
+    color: #ffffff;
+}
+
+.aduin-auth-pulse {
+    background: #65b5ff;
+    box-shadow: 0 0 0 4px rgba(101, 181, 255, 0.20);
+}
+
+.aduin-auth-hero h1 {
+    color: #ffffff;
+}
+
+.aduin-auth-hero h1 span {
+    color: #8bcbff;
+}
+
+.aduin-auth-hero > p {
+    color: #e0ecf7;
+}
+
+/* Kartu fitur */
+.aduin-auth-feature {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.aduin-auth-feature strong {
+    color: #102c49;
+}
+
+.aduin-auth-visual-footer {
+    color: #e0ecf7;
+}
+
+/* Panel formulir */
+.aduin-auth-form-side {
+    background: #ffffff;
+}
+
+.aduin-auth-welcome-icon {
+    background: #e8f2ff;
+    color: #287de1;
+}
+
+.aduin-auth-kicker {
+    color: #0b4f86;
+}
+
+.aduin-auth-form-heading h2 span {
+    color: #287de1;
+}
+
+/* Input */
+.aduin-auth-input-wrap {
+    background: #f9fbfe;
+    border: 1px solid #dce5ef;
+}
+
+.aduin-auth-input-wrap:focus-within {
+    border-color: #287de1;
+    box-shadow: 0 0 0 4px rgba(40, 125, 225, 0.10);
+    color: #287de1;
+}
+
+.aduin-auth-eye:hover {
+    color: #287de1;
+}
+
+/* Tombol Masuk */
+.aduin-auth-submit {
+    background: linear-gradient(110deg, #287de1, #0b4f86);
+    box-shadow: 0 10px 22px rgba(11, 79, 134, 0.22);
+}
+
+.aduin-auth-submit:hover:not(:disabled) {
+    box-shadow: 0 14px 28px rgba(11, 79, 134, 0.30);
+}
+
+/* Daftar */
+.aduin-auth-register {
+    background: #f1f6fd;
+}
+
+.aduin-auth-register-icon {
+    background: #e1eeff;
+    color: #287de1;
+}
+
+.aduin-auth-register a {
+    color: #0b65bc;
+}
+
+/* Link dan mobile */
+.aduin-auth-back:hover,
+.aduin-auth-mobile-brand {
+    color: #0b4f86;
+}
+
+
+
+/* ========================================
+   LOGO ASLI ADUIN
+======================================== */
+
+/* Logo pada banner kiri */
+.aduin-auth-brand-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 5px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.aduin-auth-brand-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Logo di atas formulir login */
+.aduin-auth-welcome-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f6fd;
+    border-radius: 14px;
+    padding: 6px;
+    overflow: hidden;
+}
+
+.aduin-auth-welcome-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Logo pada tampilan mobile */
+.aduin-auth-mobile-brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border-radius: 9px;
+}
+
+
+@media (max-width: 760px) {
+  .aduin-auth {
+    display: block;
+    min-height: 100vh;
+  }
+
+  .aduin-auth-visual {
+    display: none;
+  }
+
+  .aduin-auth-form-side {
+    min-height: 100vh;
+    padding: 30px 22px;
+    align-items: flex-start;
+  }
+
+  .aduin-auth-form-wrap {
+    max-width: 450px;
+  }
+
+  .aduin-auth-mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #198b62;
+    font-size: 21px;
+    margin-bottom: 46px;
+  }
+
+  .aduin-auth-form-heading h2 {
+    font-size: 29px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aduin-auth * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
