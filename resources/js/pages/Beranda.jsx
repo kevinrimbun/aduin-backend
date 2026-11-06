@@ -1,45 +1,34 @@
-import Navbar from '../components/Navbar';
+import Navbar from "../components/Navbar";
 
-import {
-    PenLine,
-    Search,
-    History,
-    Info,
-    MapPin
-} from 'lucide-react';
+import { PenLine, Search, History, Info, MapPin } from "lucide-react";
 
-import '../../css/LandingPage.css';
+import "../../css/LandingPage.css";
 
 const banner = "/Assets/banner.jpg";
 
 const Beranda = () => {
     return (
         <div className="landingpage">
-
             {/* =====================================================
                 NAVBAR
             ====================================================== */}
 
-            <Navbar/>
-
+            <Navbar />
 
             {/* =====================================================
                 BANNER SECTION
             ====================================================== */}
 
             <section className="banner-section">
-
                 <div
                     className="banner-background"
                     style={{
-                        backgroundImage: `url(${banner})`
+                        backgroundImage: `url(${banner})`,
                     }}
                 >
-
                     <div className="banner-overlay"></div>
 
                     <div className="banner-content">
-
                         <h1>
                             Bersama Kita Wujudkan
                             <br />
@@ -47,157 +36,64 @@ const Beranda = () => {
                         </h1>
 
                         <p>
-                            Laporkan permasalahan infrastruktur lingkungan
-                            di sekitar Anda
+                            Laporkan permasalahan infrastruktur lingkungan di
+                            sekitar Anda
                             <br />
                             secara mudah, cepat dan transparan.
                         </p>
-
                     </div>
-
                 </div>
 
-
-                {/* =================================================
-                    QUICK MENU
-                ================================================== */}
-
+                {/* QUICK MENU */}
                 <div className="quick-menu">
-
                     {/* Buat Pengaduan */}
-                    <a
-                        href="/pengaduan"
-                        className="quick-menu-item"
-                    >
-
+                    <a href="/pengaduan" className="quick-menu-item">
                         <div className="quick-icon blue">
                             <PenLine size={32} />
                         </div>
 
-                        <h3>
-                            Buat Pengaduan
-                        </h3>
+                        <h3>Buat Pengaduan</h3>
 
                         <p>
-                            Laporkan masalah infrastruktur
-                            lingkungan secara online
+                            Laporkan masalah infrastruktur lingkungan secara
+                            online
                         </p>
-
                     </a>
 
-
                     {/* Cek Status */}
-                    <a
-                        href="/status"
-                        className="quick-menu-item"
-                    >
-
+                    <a href="/status" className="quick-menu-item">
                         <div className="quick-icon green">
                             <Search size={32} />
                         </div>
 
-                        <h3>
-                            Cek Status
-                        </h3>
+                        <h3>Cek Status</h3>
 
-                        <p>
-                            Pantau perkembangan
-                            laporan Anda
-                        </p>
-
+                        <p>Pantau perkembangan laporan Anda</p>
                     </a>
-
 
                     {/* Riwayat */}
-                    <a
-                        href="/riwayat"
-                        className="quick-menu-item"
-                    >
-
+                    <a href="/riwayat" className="quick-menu-item">
                         <div className="quick-icon orange">
                             <History size={32} />
                         </div>
 
-                        <h3>
-                            Riwayat Laporan
-                        </h3>
+                        <h3>Riwayat</h3>
 
-                        <p>
-                            Lihat semua laporan
-                            yang pernah Anda buat
-                        </p>
-
+                        <p>Lihat laporan dari pengaduan masyarakat</p>
                     </a>
-
-                     {/* Dashborad Petugas */}
-                    <a
-                        href="/dashboard_petugas"
-                        className="quick-menu-item"
-                    >
-
-                        <div className="quick-icon orange">
-                            <History size={32} />
-                        </div>
-
-                        <h3>
-                            Dashborad Petugas
-                        </h3>
-
-                        <p>
-                            Lihat semua laporan
-                            yang pernah Anda buat
-                        </p>
-
-                    </a>
-
-
-                    {/* Informasi */}
-                    <a
-                        href="/informasi"
-                        className="quick-menu-item"
-                    >
-
-                        <div className="quick-icon purple">
-                            <Info size={32} />
-                        </div>
-
-                        <h3>
-                            Informasi Pelayanan
-                        </h3>
-
-                        <p>
-                            Panduan dan informasi
-                            layanan pengaduan
-                        </p>
-
-                    </a>
-
 
                     {/* Peta Pengaduan */}
-                    <a
-                        href="/peta"
-                        className="quick-menu-item"
-                    >
-
+                    <a href="/peta" className="quick-menu-item">
                         <div className="quick-icon red">
-                            <MapPin size={32} />
+                            <MapPin size={32} />    
                         </div>
 
-                        <h3>
-                            Peta Pengaduan
-                        </h3>
+                        <h3>Peta Pengaduan</h3>
 
-                        <p>
-                            Lihat sebaran pengaduan
-                            pada peta
-                        </p>
-
+                        <p>Lihat sebaran pengaduan pada peta</p>
                     </a>
-
                 </div>
-
             </section>
-
         </div>
     );
 };

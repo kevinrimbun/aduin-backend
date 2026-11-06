@@ -420,14 +420,6 @@ export default function Register() {
             </div>
           </div>
 
-          <a
-            href="/"
-            className="aduin-auth-back"
-          >
-            <House size={17} />
-            Kembali ke Beranda
-          </a>
-
           <p className="aduin-auth-copyright">
             © {new Date().getFullYear()} ADUIN.
             Capstone Project UT.

@@ -1,0 +1,1204 @@
+
+/* ============================= */
+/* GLOBAL PAGE */
+/* ============================= */
+
+.riwayat-page {
+    min-height: 100vh;
+    background: #f5f7fa;
+}
+
+.riwayat-container {
+    width: 100%;
+    max-width: 1440px;
+
+    margin: 0 auto;
+
+    padding: 35px 5% 60px;
+}
+
+
+/* ============================= */
+/* PAGE HEADER */
+/* ============================= */
+
+.riwayat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+}
+
+.riwayat-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 15px;
+
+    font-size: 12px;
+    color: #999;
+}
+
+.breadcrumb-active {
+    color: #07508a;
+    font-weight: 600;
+}
+
+.riwayat-header h1 {
+    margin: 0;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #19334d;
+}
+
+.riwayat-header p {
+    margin: 10px 0 0;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    color: #7b8794;
+}
+
+.riwayat-header-icon {
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #07508a;
+
+    background: #e5f1fa;
+
+    border-radius: 18px;
+}
+
+
+/* ============================= */
+/* STATISTICS */
+/* ============================= */
+
+.riwayat-statistics {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 22px 20px;
+
+    background: white;
+
+    border: 1px solid #edf0f3;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.035);
+
+    transition: all 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.07);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+}
+
+.stat-icon.blue {
+    color: #287be0;
+    background: #eaf3ff;
+}
+
+.stat-icon.orange {
+    color: #e99a26;
+    background: #fff5e5;
+}
+
+.stat-icon.purple {
+    color: #8050c7;
+    background: #f2ebff;
+}
+
+.stat-icon.green {
+    color: #269c69;
+    background: #e7f8ef;
+}
+
+.stat-card span {
+    display: block;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    color: #778494;
+}
+
+.stat-card h2 {
+    margin: 5px 0;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    color: #23384e;
+}
+
+.stat-card small {
+    font-size: 10px;
+
+    color: #a0a8b1;
+}
+
+
+/* ============================= */
+/* MAIN CONTENT */
+/* ============================= */
+
+.riwayat-content {
+    padding: 27px;
+
+    background: white;
+
+    border: 1px solid #edf0f3;
+
+    border-radius: 13px;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.035);
+}
+
+.riwayat-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 23px;
+}
+
+.riwayat-section-heading h2 {
+    margin: 0;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    color: #23384e;
+}
+
+.riwayat-section-heading p {
+    margin: 7px 0 0;
+
+    font-size: 12px;
+
+    color: #909ba8;
+}
+
+.total-label {
+    padding: 8px 13px;
+
+    background: #edf5fc;
+
+    color: #07508a;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* ============================= */
+/* SEARCH & FILTER */
+/* ============================= */
+
+.riwayat-filter {
+    display: grid;
+
+    grid-template-columns: minmax(200px, 1fr) 200px 200px;
+
+    gap: 12px;
+
+    margin-bottom: 23px;
+}
+
+.riwayat-search,
+.riwayat-select {
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 13px;
+
+    background: #fff;
+
+    border: 1px solid #e2e7ed;
+
+    border-radius: 8px;
+
+    color: #8b98a6;
+
+    transition: all 0.2s ease;
+}
+
+.riwayat-search:focus-within,
+.riwayat-select:focus-within {
+    border-color: #287be0;
+
+    box-shadow: 0 0 0 3px rgba(40, 123, 224, 0.08);
+}
+
+.riwayat-search input {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    color: #34495e;
+}
+
+.riwayat-search input::placeholder {
+    color: #aab2bc;
+}
+
+.riwayat-select select {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    color: #536273;
+
+    cursor: pointer;
+}
+
+.riwayat-select select option {
+    color: #34495e;
+}
+
+
+/* ============================= */
+/* COMPLAINT LIST */
+/* ============================= */
+
+.riwayat-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.riwayat-card {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    border: 1px solid #e9edf1;
+
+    border-radius: 10px;
+
+    background: white;
+
+    transition: all 0.25s ease;
+}
+
+.riwayat-card:hover {
+    border-color: #c6dcef;
+
+    background: #fcfdff;
+
+    box-shadow: 0 4px 15px rgba(7, 80, 138, 0.06);
+}
+
+.riwayat-card-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #287be0;
+
+    background: #edf5ff;
+
+    border-radius: 10px;
+}
+
+.riwayat-card-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.riwayat-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 9px;
+}
+
+.ticket-number {
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #287be0;
+
+    letter-spacing: 0.3px;
+}
+
+.riwayat-card-main h3 {
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #263c52;
+}
+
+.riwayat-description {
+    margin: 9px 0 14px;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    color: #8995a2;
+}
+
+.riwayat-meta {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 17px;
+}
+
+.riwayat-meta span {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 11px;
+
+    color: #8995a2;
+}
+
+.riwayat-meta svg {
+    color: #9ba9b8;
+}
+
+
+/* ============================= */
+/* STATUS BADGE */
+/* ============================= */
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.status-badge.waiting {
+    color: #c88919;
+    background: #fff5df;
+}
+
+.status-badge.verified {
+    color: #287be0;
+    background: #eaf3ff;
+}
+
+.status-badge.processing {
+    color: #8050c7;
+    background: #f2ebff;
+}
+
+.status-badge.completed {
+    color: #249363;
+    background: #e7f8ef;
+}
+
+.status-badge.rejected {
+    color: #dc5555;
+    background: #fff0f0;
+}
+
+
+/* ============================= */
+/* DETAIL BUTTON */
+/* ============================= */
+
+.riwayat-card-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    align-self: center;
+}
+
+.detail-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 9px 14px;
+
+    background: white;
+
+    border: 1px solid #d6e5f2;
+
+    border-radius: 7px;
+
+    color: #07508a;
+
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.detail-button:hover {
+    background: #07508a;
+
+    color: white;
+
+    border-color: #07508a;
+}
+
+
+/* ============================= */
+/* EMPTY STATE */
+/* ============================= */
+
+.riwayat-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 65px 20px;
+}
+
+.riwayat-empty > div {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #8da7bd;
+
+    background: #f0f5fa;
+
+    border-radius: 50%;
+
+    margin-bottom: 15px;
+}
+
+.riwayat-empty h3 {
+    margin: 0;
+
+    color: #34495e;
+
+    font-size: 16px;
+}
+
+.riwayat-empty p {
+    max-width: 350px;
+
+    margin: 9px 0 18px;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    color: #929daa;
+}
+
+.riwayat-empty button {
+    padding: 9px 17px;
+
+    background: #07508a;
+
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+
+/* ============================= */
+/* PAGINATION */
+/* ============================= */
+
+.riwayat-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-top: 22px;
+    margin-top: 22px;
+
+    border-top: 1px solid #edf0f3;
+}
+
+.riwayat-pagination > span {
+    font-size: 11px;
+
+    color: #929daa;
+}
+
+.pagination-buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.pagination-buttons button {
+    width: 33px;
+    height: 33px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border: 1px solid #e1e7ed;
+
+    border-radius: 7px;
+
+    color: #07508a;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.pagination-buttons button:hover:not(:disabled) {
+    color: white;
+
+    background: #07508a;
+
+    border-color: #07508a;
+}
+
+.pagination-buttons button:disabled {
+    color: #c4cbd2;
+
+    background: #f5f6f8;
+
+    cursor: not-allowed;
+}
+
+.page-number {
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #536273;
+}
+
+
+/* ============================= */
+/* DETAIL MODAL */
+/* ============================= */
+
+.riwayat-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(14, 31, 48, 0.55);
+
+    backdrop-filter: blur(3px);
+}
+
+.riwayat-modal {
+    width: 100%;
+    max-width: 600px;
+
+    max-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: white;
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+
+    animation: modalShow 0.25s ease;
+}
+
+@keyframes modalShow {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.riwayat-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 25px;
+
+    background: #f8fafc;
+
+    border-bottom: 1px solid #edf0f3;
+}
+
+.riwayat-modal-header span {
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #287be0;
+}
+
+.riwayat-modal-header h2 {
+    margin: 6px 0 0;
+
+    font-size: 19px;
+
+    color: #23384e;
+}
+
+.riwayat-modal-header button {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border: 1px solid #e5e9ee;
+
+    border-radius: 8px;
+
+    color: #7b8794;
+
+    cursor: pointer;
+}
+
+.riwayat-modal-body {
+    padding: 25px;
+
+    overflow-y: auto;
+}
+
+.riwayat-modal-body > h3 {
+    margin: 12px 0;
+
+    font-size: 20px;
+
+    color: #263c52;
+}
+
+.modal-detail-status {
+    margin-bottom: 22px;
+}
+
+.modal-detail-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.modal-detail-grid > div {
+    min-width: 0;
+}
+
+.modal-detail-grid .full {
+    grid-column: 1 / -1;
+}
+
+.modal-detail-grid label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #929daa;
+}
+
+.modal-detail-grid p {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #34495e;
+}
+
+.modal-detail-grid .modal-description {
+    display: block;
+
+    padding: 13px;
+
+    background: #f7f9fb;
+
+    border-radius: 8px;
+
+    line-height: 1.7;
+
+    color: #667789;
+}
+
+.modal-image-placeholder {
+    min-height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #9ba9b8;
+
+    background: #f6f8fa;
+
+    border: 1px dashed #d6dfe8;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+}
+
+.riwayat-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 15px 25px;
+
+    border-top: 1px solid #edf0f3;
+}
+
+.riwayat-modal-footer button {
+    padding: 10px 22px;
+
+    color: white;
+
+    background: #07508a;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* ============================= */
+/* TABLET */
+/* ============================= */
+
+@media (max-width: 992px) {
+
+    .riwayat-container {
+        padding: 30px 25px 50px;
+    }
+
+    .riwayat-statistics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 13px;
+    }
+
+    .riwayat-filter {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .riwayat-search {
+        grid-column: 1 / -1;
+    }
+
+    .riwayat-card {
+        gap: 13px;
+    }
+
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 576px) {
+
+    .riwayat-container {
+        padding: 25px 15px 40px;
+    }
+
+    /* HEADER */
+
+    .riwayat-header {
+        margin-bottom: 22px;
+    }
+
+    .riwayat-header h1 {
+        font-size: 22px;
+    }
+
+    .riwayat-header p {
+        max-width: 280px;
+
+        font-size: 11px;
+    }
+
+    .riwayat-header-icon {
+        width: 48px;
+        height: 48px;
+
+        border-radius: 12px;
+    }
+
+    .riwayat-header-icon svg {
+        width: 25px;
+    }
+
+
+    /* STATISTICS */
+
+    .riwayat-statistics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+
+        margin-bottom: 20px;
+    }
+
+    .stat-card {
+        gap: 9px;
+
+        padding: 14px 10px;
+    }
+
+    .stat-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .stat-icon svg {
+        width: 19px;
+    }
+
+    .stat-card span {
+        font-size: 10px;
+    }
+
+    .stat-card h2 {
+        font-size: 21px;
+    }
+
+    .stat-card small {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+
+    /* MAIN CONTENT */
+
+    .riwayat-content {
+        padding: 17px 13px;
+
+        border-radius: 10px;
+    }
+
+    .riwayat-section-heading {
+        align-items: flex-start;
+
+        margin-bottom: 17px;
+    }
+
+    .riwayat-section-heading h2 {
+        font-size: 15px;
+    }
+
+    .riwayat-section-heading p {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .total-label {
+        padding: 7px 9px;
+
+        font-size: 10px;
+    }
+
+
+    /* FILTER */
+
+    .riwayat-filter {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px;
+    }
+
+    .riwayat-search {
+        grid-column: 1 / -1;
+    }
+
+    .riwayat-search,
+    .riwayat-select {
+        height: 41px;
+
+        padding: 0 9px;
+
+        gap: 6px;
+    }
+
+    .riwayat-search input,
+    .riwayat-select select {
+        font-size: 10px;
+    }
+
+
+    /* CARD */
+
+    .riwayat-card {
+        position: relative;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        padding: 14px 12px;
+    }
+
+    .riwayat-card-icon {
+        width: 37px;
+        height: 37px;
+    }
+
+    .riwayat-card-icon svg {
+        width: 20px;
+    }
+
+    .riwayat-card-main {
+        flex: 1;
+        width: calc(100% - 47px);
+    }
+
+    .riwayat-card-top {
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        gap: 7px;
+    }
+
+    .ticket-number {
+        font-size: 9px;
+    }
+
+    .status-badge {
+        padding: 5px 8px;
+
+        font-size: 9px;
+    }
+
+    .riwayat-card-main h3 {
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+    .riwayat-description {
+        font-size: 10px;
+
+        margin: 7px 0 10px;
+    }
+
+    .riwayat-meta {
+        flex-direction: column;
+
+        gap: 7px;
+    }
+
+    .riwayat-meta span {
+        font-size: 10px;
+    }
+
+    .riwayat-card-action {
+        width: 100%;
+
+        justify-content: flex-end;
+    }
+
+    .detail-button {
+        padding: 7px 12px;
+
+        font-size: 10px;
+    }
+
+
+    /* PAGINATION */
+
+    .riwayat-pagination {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .riwayat-pagination > span {
+        font-size: 10px;
+    }
+
+    .pagination-buttons {
+        align-self: flex-end;
+    }
+
+
+    /* MODAL */
+
+    .riwayat-modal {
+        max-height: 85vh;
+    }
+
+    .riwayat-modal-header {
+        padding: 17px;
+    }
+
+    .riwayat-modal-header h2 {
+        font-size: 16px;
+    }
+
+    .riwayat-modal-body {
+        padding: 17px;
+    }
+
+    .riwayat-modal-body > h3 {
+        font-size: 16px;
+    }
+
+    .modal-detail-grid {
+        gap: 15px;
+    }
+
+    .modal-detail-grid p {
+        font-size: 11px;
+    }
+
+    .riwayat-modal-footer {
+        padding: 13px 17px;
+    }
+
+}
+
+.modal-detail-image {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+}

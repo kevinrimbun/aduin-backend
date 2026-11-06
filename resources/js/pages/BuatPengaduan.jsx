@@ -548,11 +548,7 @@ const handleSubmit = async (e) => {
                                         <select
                                             id="kecamatan"
                                             required
-                                            value={
-                                                kecamatanList.find(
-                                                    item => item.name === form.kecamatan
-                                                )?.id || ''
-                                            }
+                                            value={form.kecamatan === 'BALUNG' ? '3509130' : ''}
                                             onChange={handleKecamatan}
                                             disabled={loadingKecamatan}
                                         >
@@ -560,11 +556,13 @@ const handleSubmit = async (e) => {
                                                 {loadingKecamatan ? 'Memuat kecamatan...' : 'Pilih kecamatan'}
                                             </option>
 
-                                            {kecamatanList.map(item => (
-                                                <option key={item.id} value={item.id}>
-                                                    {item.name}
-                                                </option>
-                                            ))}
+                                        {kecamatanList
+                                            .filter(item => item.id === '3509130')
+                                            .map(item => (
+                                            <option key={item.id} value={String(item.id)}>
+                                                {item.name}
+                                            </option>
+                                        ))}
                                         </select>
                                     </div>
                                     <div className="aduin-field">

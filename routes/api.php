@@ -16,7 +16,15 @@ Route::middleware('auth:sanctum')->group(function () {
         'updateStatus'
     ]);
 
+    Route::post('/pengaduan/{pengaduan}/konfirmasi-penyelesaian', [
+        PengaduanController::class,
+        'konfirmasiPenyelesaian'
+    ]);
+
 });
+
+Route::get('/riwayat-publik', [PengaduanController::class, 'riwayatPublik']);
+
 
 Route::get('/cek-session', function () {
     return response()->json([

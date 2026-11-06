@@ -106,9 +106,9 @@ async function handleSubmit(e) {
       if (role === 'masyarakat') {
         window.location.href = '/dashboard';
       } else if (role === 'petugas') {
-        window.location.href = '/dashboard/petugas';
+        window.location.href = '/dashboard-petugas';
       } else if (role === 'admin') {
-        window.location.href = '/dashboard/admin';
+        window.location.href = '/dashboard-admin';
       } else {
         setError('Role pengguna tidak dikenali.');
       }
@@ -411,15 +411,6 @@ async function handleSubmit(e) {
             </div>
 
           </div>
-
-          {/* KEMBALI KE BERANDA */}
-          <a
-            href="/"
-            className="aduin-auth-back"
-          >
-            <House size={17} />
-            Kembali ke Beranda
-          </a>
 
           {/* COPYRIGHT */}
           <p className="aduin-auth-copyright">

@@ -125,9 +125,24 @@ public function login(Request $request)
 
     public function user(Request $request)
     {
+        $user = Auth::guard('web')->user();
+
+        if (!$user) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Pengguna belum login.',
+            ], 401);
+        }
+
         return response()->json([
             'success' => true,
-            'user' => $request->user(),
+            'user' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'username' => $user->username,
+                'email' => $user->email,
+                'role' => $user->role,
+            ],
         ], 200);
     }
 

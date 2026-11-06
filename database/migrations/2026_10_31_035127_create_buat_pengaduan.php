@@ -59,11 +59,8 @@ return new class extends Migration
 
             // Status pengaduan
             $table->enum('status', [
-                'Pengaduan Baru',
-                'Verifikasi',
-                'Ditugaskan',
                 'Dalam Pengerjaan',
-                'Selesai'
+                'Ajukan Penyelesaian'
             ])->default('Pengaduan Baru');
 
             // Tanggal dibuat dan diperbarui

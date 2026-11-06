@@ -1,19 +1,20 @@
 
 import React from 'react';
+import { useAuth } from '../context/AuthContext';
 
 import {
     Home,
     FileText,
     ClipboardCheck,
     History,
-    Info,
-    UserCircle
+    UserCircle,
 } from 'lucide-react';
 
 const logo = "/Assets/aduin-favicon.png";
 
 const Navbar = () => {
-    
+    const { isAuthenticated, name, username } = useAuth();
+
     const currentPath = window.location.pathname;
 
     const isActive = (path) => {
@@ -25,7 +26,6 @@ const Navbar = () => {
 
             {/* LOGO */}
             <div className="navbar-logo">
-
                 <div className="logo-icon">
                     <img
                         src={logo}
@@ -38,12 +38,12 @@ const Navbar = () => {
                     <h2>ADUIN</h2>
                     <p>ADUAN INFRASTRUKTUR</p>
                 </div>
-
             </div>
 
             {/* MENU NAVIGASI */}
             <div className="navbar-menu">
 
+                {/* BERANDA */}
                 <a
                     href="/"
                     className={`nav-link ${isActive('/')}`}
@@ -52,6 +52,7 @@ const Navbar = () => {
                     <span>Beranda</span>
                 </a>
 
+                {/* BUAT PENGADUAN */}
                 <a
                     href="/pengaduan"
                     className={`nav-link ${isActive('/pengaduan')}`}
@@ -60,6 +61,7 @@ const Navbar = () => {
                     <span>Buat Pengaduan</span>
                 </a>
 
+                {/* CEK STATUS */}
                 <a
                     href="/status"
                     className={`nav-link ${isActive('/status')}`}
@@ -68,14 +70,7 @@ const Navbar = () => {
                     <span>Cek Status</span>
                 </a>
 
-                  <a
-                    href="/dashboard_petugas"
-                    className={`nav-link ${isActive('/dashboard_petugas')}`}
-                >
-                    <History size={16} />
-                    <span>Dashboard Petugas</span>
-                </a>
-
+                {/* RIWAYAT */}
                 <a
                     href="/riwayat"
                     className={`nav-link ${isActive('/riwayat')}`}
@@ -84,22 +79,29 @@ const Navbar = () => {
                     <span>Riwayat</span>
                 </a>
 
-                <a
-                    href="/informasi"
-                    className={`nav-link ${isActive('/informasi')}`}
-                >
-                    <Info size={16} />
-                    <span>Informasi</span>
-                </a>
+                {/* JIKA SUDAH LOGIN */}
+                {isAuthenticated ? (
+                    <a
+                        href="/dashboard"
+                        className="login-button navbar-user-button"
+                    >
+                        <UserCircle size={20} />
 
-                {/* LOGIN */}
-                <a
-                    href="/login"
-                    className="login-button"
-                >
-                    <UserCircle size={20} />
-                    <span>Masuk / Daftar</span>
-                </a>
+                        <span>
+                            {name || username || 'Pengguna'}
+                        </span>
+                    </a>
+                ) : (
+
+                    /* JIKA BELUM LOGIN */
+                    <a
+                        href="/login"
+                        className="login-button"
+                    >
+                        <UserCircle size={20} />
+                        <span>Masuk / Daftar</span>
+                    </a>
+                )}
 
             </div>
 

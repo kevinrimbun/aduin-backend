@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   Home,
@@ -20,6 +19,7 @@ import {
 } from "lucide-react";
 
 import "../../css/DashboardMasyarakat.css";
+const logo = "/Assets/aduin-favicon.png";
 
 const laporan = [
   {
@@ -62,12 +62,35 @@ const informasi = [
 
 function DashboardMasyarakat({ userName }) {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  const handleLogout = async () => {
+    try {
+        const response = await fetch('/logout', {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: {
+                'X-CSRF-TOKEN': document
+                    .querySelector('meta[name="csrf-token"]')
+                    .getAttribute('content'),
+                'Accept': 'application/json',
+            },
+        });
+
+        if (response.ok) {
+            window.location.href = '/login';
+        } else {
+            alert('Logout gagal. Silakan coba kembali.');
+        }
+    } catch (error) {
+        console.error('Logout error:', error);
+        alert('Terjadi kesalahan saat logout.');
+    }
+};
 
   const menu = [
     { label: "Beranda", icon: Home, href: "/" },
     { label: "Buat Pengaduan", icon: FilePlus2, href: "/pengaduan" },
     { label: "Cek Status", icon: Search, href: "/status" },
-    { label: "Riwayat Laporan", icon: ClipboardList, href: "/riwayat" },
+    { label: "Riwayat", icon: ClipboardList, href: "/riwayat" },
     { label: "Profil", icon: UserRound, href: "/profil" },
   ];
 
@@ -79,7 +102,13 @@ function DashboardMasyarakat({ userName }) {
 
         <div className="sidebar-brand">
           <div className="brand-icon">
-            <FileText size={24} />
+                <div className="logo-icon">
+                    <img
+                        src={logo}
+                        alt="ADUIN"
+                        className="logo"
+                    />
+                </div>
           </div>
           <span>ADUIN</span>
 
@@ -110,10 +139,14 @@ function DashboardMasyarakat({ userName }) {
           })}
         </nav>
 
-        <a href="/logout" className="sidebar-logout">
-          <LogOut size={19} />
-          <span>Keluar</span>
-        </a>
+<button
+    type="button"
+    onClick={handleLogout}
+    className="sidebar-logout"
+>
+    <LogOut size={19} />
+    <span>Keluar</span>
+</button>
 
       </aside>
 
@@ -149,7 +182,6 @@ function DashboardMasyarakat({ userName }) {
             </div>
 
             <span>{userName || "Pengguna"}</span>
-            <ChevronDown size={16} />
           </div>
 
         </header>
@@ -188,54 +220,6 @@ function DashboardMasyarakat({ userName }) {
               <p>Disetujui / Selesai</p>
               <h2>2</h2>
             </div>
-          </div>
-
-        </section>
-
-        {/* LAPORAN TERBARU */}
-        <section className="dashboard-section">
-
-          <div className="section-heading">
-            <h3>Laporan Terbaru</h3>
-            <a href="/riwayat">
-              Lihat Semua <ArrowRight size={16} />
-            </a>
-          </div>
-
-          <div className="table-wrapper">
-            <table className="report-table">
-              <thead>
-                <tr>
-                  <th>No. Laporan</th>
-                  <th>Kategori</th>
-                  <th>Lokasi</th>
-                  <th>Status</th>
-                  <th>Tanggal</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {laporan.map((item) => (
-                  <tr key={item.id}>
-                    <td className="report-id">{item.id}</td>
-                    <td>{item.kategori}</td>
-                    <td>{item.lokasi}</td>
-                    <td>
-                      <span
-                        className={`status-badge ${
-                          item.status === "Selesai"
-                            ? "status-success"
-                            : "status-process"
-                        }`}
-                      >
-                        {item.status}
-                      </span>
-                    </td>
-                    <td>{item.tanggal}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
 
         </section>
@@ -333,7 +317,7 @@ function DashboardMasyarakat({ userName }) {
         </section>
 
         <footer className="dashboard-footer">
-          © 2025 ADUIN - Aduan Infrastruktur Kecamatan Balung.
+          © 2026 ADUIN - Aduan Infrastruktur Kecamatan Balung.
           Semua Hak Dilindungi.
         </footer>
 
